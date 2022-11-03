@@ -1,0 +1,18 @@
+<?php
+
+/*. /wp-content/themes/astra/assets/fonts/astra.woff
+Plugin Name: Deluxe Preload Astra Woff Font
+Version: 1.0
+Description: Preload Astra Woff Font and Backdrop Image + Slideshow-Image in Head in the WordPress site.
+Author: Thomas Baldauf
+Author URI: https://deinehochzeitdeluxe.de/
+License: GPLv2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: Deine Hochzeit Deluxe
+*/
+
+/** Head Font Preloading **/
+function font_preloading_preload_key_requests() { ?>
+	<link rel="preload" as="font" type="font/wof" href="https://deinehochzeitdeluxe.de/wp-content/themes/astra/assets/fonts/yourfontname.wof" crossorigin="anonymous">
+<?php }
+add_action( 'wp_head', 'font_preloading_preload_key_requests' ); 
